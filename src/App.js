@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { fetchData } from './Data/index.js';
 import Apod from './Components/Apod.js';
+import LoadingMessage from './Components/LoadingMessage';
 
 // NOTE: Can display PHOTO or VIDEO from APOD with react
 // REMINDER 2:  Using Sept. 9th as the date in query because API was throwing errors after 5pm
@@ -24,7 +25,7 @@ function App() {
   if (!photoOfTheDay) {
     return (
       <div className="App">
-        <h3 className="loading-msg">LOADING...</h3>
+        <LoadingMessage>LOADING...</LoadingMessage>
       </div>
     );
   }

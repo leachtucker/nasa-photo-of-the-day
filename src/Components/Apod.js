@@ -15,7 +15,7 @@ function Apod(props) {
             <Media url={photoOfTheDay.url} title={photoOfTheDay.title} mediaType={photoOfTheDay.media_type} />
             <H2>{photoOfTheDay.title}</H2>
             <Date date={photoOfTheDay.date} />
-            <Explantion>{photoOfTheDay.explanation}</Explantion>
+            <Explantion elevation={3} variant="outlined" square>{photoOfTheDay.explanation}</Explantion>
         </div>
     );
 }
