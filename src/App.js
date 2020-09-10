@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { fetchData } from './Data/index.js';
-import Apod from './Apod.js';
+import Apod from './Components/Apod.js';
 
 // NOTE: Can display PHOTO or VIDEO from APOD with react
-// REMINDER: Use 'date=2020-07-26' for styling iFrame
 // REMINDER 2:  Using Sept. 9th as the date in query because API was throwing errors after 5pm
 
 function App() {

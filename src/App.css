@@ -9,15 +9,11 @@
   /* border: 1px solid grey; */
 }
 
-/* GENERAL STYLING */
+/* GENERAL STYLING & OVERALL STRUCTURE */
 h1 {
   font-size: 1.7rem;
   font-weight: 700;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: sans-serif;
 }
 
 .App h1 {
@@ -33,19 +29,6 @@ h2 {
   align-items: center;
 }
 
-.date-dropdown {
-  margin: 2% 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 32%;
-  justify-content: space-around;
-}
-
-.main-photo {
-  width: 45%;
-}
-
 .title {
   margin: 1% 0;
 }
@@ -54,7 +37,4 @@ h2 {
   margin-bottom: 2%;
 }
 
-.explanation {
-  text-align: center;
-  width: 80%;
-}
+/* REST OF STYLING COMES FROM STYLED COMPONENTS */

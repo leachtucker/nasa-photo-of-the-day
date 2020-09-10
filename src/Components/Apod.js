@@ -2,7 +2,9 @@
 import React from 'react';
 import Media from './Media.js';
 import Date from './Date.js';
-import DateDropDown from './DateDropDown';
+import DateDropDown from './DateDropDown.js';
+import H2 from './H2.js';
+import Explantion from './Explanation.js';
 
 function Apod(props) {
     const {photoOfTheDay, fetchFromDate} = props;
@@ -11,9 +13,9 @@ function Apod(props) {
         <div className="Apod">
             <DateDropDown fetchFromDate={fetchFromDate} />
             <Media url={photoOfTheDay.url} title={photoOfTheDay.title} mediaType={photoOfTheDay.media_type} />
-            <h2 className="title">{photoOfTheDay.title}</h2>
+            <H2>{photoOfTheDay.title}</H2>
             <Date date={photoOfTheDay.date} />
-            <p className="explanation">{photoOfTheDay.explanation}</p>
+            <Explantion>{photoOfTheDay.explanation}</Explantion>
         </div>
     );
 }
