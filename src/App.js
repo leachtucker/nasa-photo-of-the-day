@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+import './App.css';
 import { fetchData } from './Data/index.js';
+import Apod from './Apod.js';
+
+// NOTE: Can display PHOTO or VIDEO from APOD with react
+// REMINDER: Use 'date=2020-07-26' for styling iFrame
 
 function App() {
   const [photoOfTheDay, setPTD] = useState();
@@ -10,14 +14,22 @@ function App() {
     () => {
       // Fetching APOD data from API and pushing it into the state
       fetchData(setPTD);
-    },[]);
+
+    }, []);
+
+  // Displays a loading message if axios is still fetching data from API
+  if (!photoOfTheDay) {
+    return (
+      <div className="App">
+        <h3 className="loading-msg">LOADING...</h3>
+      </div>
+    );
+  }
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <h1>Astronomy Picture of the Day</h1>
+      <Apod photoOfTheDay={photoOfTheDay} />
     </div>
   );
 }
