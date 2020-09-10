@@ -7,10 +7,11 @@ function Apod(props) {
     const {photoOfTheDay} = props;
 
     return (
-        <div>
+        <div className="apod">
             <Media url={photoOfTheDay.url} title={photoOfTheDay.title} mediaType={photoOfTheDay.media_type} />
-            <h2>{photoOfTheDay.title}</h2>
+            <h2 className="title">{photoOfTheDay.title}</h2>
             <Date date={photoOfTheDay.date} />
+            <p className="explanation">{photoOfTheDay.explanation}</p>
         </div>
     );
 }
