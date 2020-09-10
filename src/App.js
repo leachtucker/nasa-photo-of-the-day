@@ -15,8 +15,11 @@ function App() {
     () => {
       // Fetching APOD data from API and pushing it into the state
       fetchData(setPTD);
-
     }, []);
+
+    const fetchFromDate = (date) => {
+      fetchData(setPTD, date);
+    }
 
   // Displays a loading message if axios is still fetching data from API
   if (!photoOfTheDay) {
@@ -30,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <h1>Astronomy Picture of the Day</h1>
-      <Apod photoOfTheDay={photoOfTheDay} />
+      <Apod photoOfTheDay={photoOfTheDay} fetchFromDate={fetchFromDate} />
     </div>
   );
 }
